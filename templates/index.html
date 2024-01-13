@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        background-image: url("../images/pics2.jpg");
+
+        padding: 0;
+
+        color: #ffffff;
+
+        margin: 0;
+      }
+
+      .bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        background-image: url("../images/pics2.jpg");
+
+        background-image: linear-gradient(grey, rgba(29, 40, 31, 0.8)),
+          url("../images/pics2.jpg");
+
+        background-position: center;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        height: 100vh;
+
+        background-attachment: fixed;
+      }
+
+      .app-title {
+        color: white;
+
+        font-size: 60px;
+
+        font-weight: 600;
+      }
+
+      .app-text {
+        color: white;
+
+        font-size: 30px;
+
+        font-weight: 300;
+      }
+
+      .button {
+        font-size: 16px;
+
+        padding: 24px 48px;
+
+        color: #ffffff;
+
+        background-color: transparent;
+
+        display: block;
+
+        border: none;
+
+        border: 2px solid #ffffff;
+
+        border-radius: 20px;
+
+        cursor: pointer;
+      }
+    </style>
+
+    <title>EuRecog App</title>
+  </head>
+
+  <body>
+    <div class="bg">
+      <div>
+        <h1 class="app-title">The EuRecog App</h1>
+
+        <h3 class="app-text">
+          Smart Hand Gesture Recognition And Question Answering App
+        </h3>
+      </div>
+
+      <a href="/get_gestures">
+        <button class="button">Begin</button>
+      </a>
+    </div>
+
+    <!-- JavaScript Part -->
+
+    <script>
+      document
+        .getElementById("start-button")
+        .addEventListener("click", function () {
+          fetch("/get_text")
+            .then((response) => response.text())
+
+            .then((text) => {
+              if (text) {
+                alert("Received text from server: " + text);
+              } else {
+                alert("No text available from the server.");
+              }
+            })
+
+            .catch((error) => console.error("Error fetching data:", error));
+        });
+    </script>
+  </body>
+</html>

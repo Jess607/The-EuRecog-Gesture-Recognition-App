@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Textbox Example</title>
+    <style>
+
+body {
+            background-color: #383B42;
+            
+        }
+        .text-frame {
+    text-align: center;
+    margin-top: 100px;
+}
+
+textarea {
+    width: 300px;
+    height: 70px;
+    resize: none;
+}
+
+button {
+    margin-top: 10px;
+    display:block;
+    margin:auto;
+    width:100px;
+    height:40px;
+    cursor:pointer;
+}
+
+.gesture-title{
+    color: #E3879E;
+            font-size: 28px;
+            margin-bottom: 20px; 
+            text-align: center;
+}
+
+.container{
+    border:5px solid;
+            margin:auto;
+            width:50%;
+            padding:5px
+}
+
+label{
+    color: #FFF8F0;
+            font-size: 20px;
+            margin-bottom: 20px;
+}
+
+button{
+    padding:10px 2px;
+        background-color: #E3879E;
+        color: #FFF8F0;
+        border: none;
+        border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="gesture-title"> Customize Your Gestures</h1>
+        <div class="container">
+            <form id="myForm" action="/process_gestures" method="post">
+                
+                <div class="input-group">
+                <label for="okay">Okay 👌:</label>
+                <textarea name="okay" id="okay" rows="4" cols="50" placeholder="Enter your question">What is cyan?</textarea>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="peace">Peace ✌️:</label>
+                <textarea name="peace" id="peace" rows="4" cols="50" placeholder="Enter your question">Who named the Pacific ocean?</textarea>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="thumbs up">Thumbs Up 👍:</label>
+                <textarea name="thumbs up" id="thumbs up" rows="4" cols="50" placeholder="Enter your question">What is the smallest country on earth?</textarea>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="thumbs down">Thumbs Down 👎:</label>
+                <textarea name="thumbs down" id="thumbs down" rows="4" cols="50" placeholder="Enter your question">What is the hottest planet?</textarea>
+            </div>
+            <br>
+
+
+            <div class="input-group">
+                <label for="call me">Call Me 🤙 :</label>
+                <textarea name="call me" id="call me" rows="4" cols="50" placeholder="Enter your question">What is cynophobia?</textarea>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="stop">Stop ✋:</label>
+                <textarea name="stop" id="stop" rows="4" cols="50" placeholder="Enter your question">Who is the CEO of interswitch?</textarea>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <label for="rock">Rock 🤘:</label>
+                <textarea name="rock" id="rock" rows="4" cols="50" placeholder="Enter your question">What is the fastest land animal?</textarea>
+            </div>
+            <br>
+
+
+            <div class="input-group">
+                <label for="live long">Live Long 🖖:</label>
+                <textarea name="live long" id="live long" rows="4" cols="50" placeholder="Enter your question">Who was the first disney princess?</textarea>
+            </div>
+            <br>
+
+
+            <div class="input-group">
+                <label for="fist">Fist 👊:</label>
+                <textarea name="fist" id="fist" rows="4" cols="50" placeholder="Enter your question">What foods can dogs not eat?</textarea>
+            </div>
+            <br>
+
+
+            <div class="input-group">
+                <label for="smile">Smile 👋:</label>
+                <textarea name="smile" id="smile" rows="4" cols="50" placeholder="Enter your question">What is the coldest place on earth?</textarea>
+            </div>
+
+            <br>
+            <br>
+                
+
+               
+                
+                <button type="submit">Start Webcam</button>
+            </form>
+        </div>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        const inputGroups = document.querySelectorAll(".input-group");
+    
+        inputGroups.forEach(inputGroup => {
+            const input = inputGroup.querySelector("input");
+            const editButton = inputGroup.querySelector(".editButton");
+    
+            editButton.addEventListener("click", function () {
+                if (input.readOnly) {
+                    input.readOnly = false;
+                    editButton.textContent = "Save";
+                    editButton.classList.add("editing");
+                } else {
+                    input.readOnly = true;
+                    editButton.textContent = "Edit";
+                    editButton.classList.remove("editing");
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
