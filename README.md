@@ -29,7 +29,16 @@ Every feature is packaged in a flask app using HTML/CSS and some javascript for 
 
 # How It Works
 When users login the app, they are met with a simple homepage containing the name of the app and a prompt to begin the experience. 
+
 ![Alt text](homepage.png)
+
+Upon clicking begin, the user is given the opportunity to customize the gestures put forward by the model. Each gesture represents a question that could potentially be asked. There are questions provided as placeholders in case users decides to not edit.
+
+![Alt text](gestures.png)
+
+After customizing gestures, users may then click the start webcam button. 
+
+![Alt text](startwebcam.png)
 
 # File Description 
 The folder contains:
