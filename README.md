@@ -22,7 +22,7 @@ The code requires:
 * `numpy`
 
 # About The Project 
-The advent of object detection and smart gesture recognition systems has further shown the extent of the amazing potential of artificial intelligence systems. Combining computer vision processes with natural language processing (NLP) systems would prove to be even more phenomenal than what each system could achieve individually. In this project, we leverage of a pre built hand gesture recognition model called `mp hand gesture` in conjunction with the mediapipe and tensorflow libraries. Mediapipe is used to note landmarks on palms which are used to recognize gestures being made. Tensorflow is used to load the prebuilt gesture recognition model. The model includes ten hand gestures each with its individual meaning. To make things interesting, we give users the ability to edit each gesture to questions which are then sent to a large language model(particularly OPENAI's gpt-3.5-turbo-instruct) for answers. Utilizing gTTS (google text-to-speech), audio versions of text responses are also provided to users. 
+The advent of object detection and smart gesture recognition systems has further shown the extent of the amazing potential of artificial intelligence systems. Combining computer vision processes with natural language processing (NLP) systems would prove to be even more phenomenal than what each system could achieve individually. In this project, we leverage of a pre built hand gesture recognition model called `mp hand gesture` in conjunction with the mediapipe and tensorflow libraries. Mediapipe is used to note landmarks on palms which are used to recognize gestures being made. Tensorflow is used to load the prebuilt gesture recognition model. The model includes ten hand gestures each with its individual meaning. To make things interesting, we give users the ability to edit each gesture to questions which are then sent to a large language model(particularly OPENAI's gpt-3.5-turbo-instruct) for answers. In order to make use of this llm, it is important users have access to a valid `OPENAI API key` to make calls to the endpoint. Utilizing gTTS (google text-to-speech), audio versions of text responses are also provided to users. 
 Every feature is packaged in a flask app using HTML/CSS and some javascript for its UI. 
 
 
@@ -44,7 +44,7 @@ Next, the webcam starts and users make the gestures at the camera which captures
 
 ![Alt text](webcam.png)
 
-Answeres generated are displayed as text.
+Answers generated are displayed as text.
 
 ![Alt text](cyan-two.png)
 
@@ -54,17 +54,16 @@ In addition users have the option of getting an audio response by simply clickin
 
 
 
-
-
-
-
-
 # File Description 
 The folder contains:
-* `a data folder` that contains the original dataset and that generated after creating the clustering model that served as an input for the powerbi dashboard
-* `customer.ipynb` a jupyter notebook of the clustering model creation 
-* `customer_segment.pbix` the powerbi dashboard created- this should be opened with powerbi desktop
+* `mp_hand_gesture folder` that contains the code for the gesture recognition model
+* `templates folder` that contains the html files used to create the user interface of the flask application
+* `app.py` the code for the flask application
+* `chat.py` the code for getting the result from the llm 
+* `data.pickle` data used in the gesture recognition model
+* `gesture.names` an editable .names file used in attaching questions to gestures.
+* `welcome.mp3` the audio response generated from the llm response. 
 
 
 # Licensing And Authors
-This code was created by Jessica Ogwu under the GPL-3.0 license. Please feel free to use the resources as you deem fit.
+This code was created by Jessica Ogwu under the Apache 2.0 license. Please feel free to use the resources as you deem fit.
