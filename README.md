@@ -32,13 +32,32 @@ When users login the app, they are met with a simple homepage containing the nam
 
 ![Alt text](homepage.png)
 
-Upon clicking begin, the user is given the opportunity to customize the gestures put forward by the model. Each gesture represents a question that could potentially be asked. There are questions provided as placeholders in case users decides to not edit.
+Upon clicking begin, users are given the opportunity to customize the gestures put forward by the model. Each gesture represents a question that could potentially be asked. There are questions provided as placeholders in case users decide to not edit.
 
 ![Alt text](gestures.png)
 
-After customizing gestures, users may then click the start webcam button. 
+After customizing gestures, the user may then click the start webcam button. 
 
 ![Alt text](startwebcam.png)
+
+Next, the webcam starts and users make the gestures at the camera which captures these gestures and returns the accompanying questions attached to them on the screen. The capture of gestures sends this question to the LLM for an answer. 
+
+![Alt text](webcam.png)
+
+Answeres generated are displayed as text.
+
+![Alt text](cyan-two.png)
+
+In addition users have the option of getting an audio response by simply clicking on the 'play answer' button.
+
+![Alt text](pacific-two.png)
+
+
+
+
+
+
+
 
 # File Description 
 The folder contains:
