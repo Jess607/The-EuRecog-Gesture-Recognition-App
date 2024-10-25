@@ -1,0 +1,10 @@
+flask
+cv2
+numpy
+mediapipe
+openai
+time
+threading
+queue
+gtts
+tensorflow
